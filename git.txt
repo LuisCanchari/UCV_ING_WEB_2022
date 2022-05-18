@@ -1,0 +1,19 @@
+#iniciar repositorio
+git init
+
+#descargar archivo
+git clone <url>
+
+#ver url remoto
+git remote -v
+
+#agregar remoto
+git remote add <name> <url>
+
+#descargar ultima version
+git pull origin main
+
+#actualizar ultima version
+git push origin main
+
+
