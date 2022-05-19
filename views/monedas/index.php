@@ -8,15 +8,17 @@
     <title>Monedas</title>
 </head>
 <body>
-<h2>Monedas</h2>
+<h2><?php echo $data['titulo']?></h2>
 
-<a href="#">Agregar</a>
+<a href="index.php?c=moneda&a=create">Agregar</a>
 <table border="1" width="80%" cellspacing="0">
     <thead>
         <th>codigo</th>
         <th>Nombre</th>
         <th>Pais</th>
         <th>Factor</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
     </thead>
     <tbody>
     <?php foreach ($data["monedas"] as $dato) {
@@ -25,6 +27,8 @@
         echo "<td>". $dato['nombre']."</td>";
         echo "<td>". $dato['pais']."</td>";
         echo "<td>". $dato['factor']."</td>";
+        echo "<td> <a href='index.php?c=moneda&a=edit&id=".$dato['id']."'>Editar</a>";
+        echo "<td> <a href='index.php?c=moneda&a=destroy&id=".$dato['id']."'>Eliminar</a>";
 
         echo "</tr>";
     }?>

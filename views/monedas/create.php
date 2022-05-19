@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <h2>Monedas</h2>
+    <h2><?php echo $data['titulo']?></h2>
 
-    <form id="nuevo" name="nuevo" method="POST" action="" autocomplete="off">
+    <form id="nuevo" name="nuevo" method="POST" action="index.php?c=moneda&a=store" autocomplete="off">
         Codigo: <input type="text" id="codigo" name="codigo"> <br>
         Nombre: <input type="text" id="nombre" name="nombre"> <br>
         Pais: <input type="text" id="pais" name="pais"> <br>
         Factor: <input type="number" id="factor" name="factor" step="0.01"> <br>
         <input type="submit" id="guardar" name="guardar" value="Guardar">
     </form>
+
+    <a href="index.php">Home</a>
 </body>
 
 </html>

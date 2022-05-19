@@ -1,3 +1,3 @@
 <?php
-define ("CONTROLADOR_PRINCIPAL", "MonedasController");
+define ("CONTROLADOR_PRINCIPAL", "Moneda");
 define ("ACCION_PRINCIPAL", "index");

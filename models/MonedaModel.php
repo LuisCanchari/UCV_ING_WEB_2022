@@ -16,10 +16,36 @@
             }
             return $this->monedas;
         }
-        public function insertar($codigo, $nombre, $pais, $factor){
-            $sql =  "INSERT INTO monedas (codigo, nombre, pais, factor) 
-                     VALUES ('$codigo', '$nombre', '$pais', '$factor')";
+
+        public function getMoneda($id){
+            $sql =  "select * from monedas where id=$id";
             $resultado = $this->db->query($sql);
+            $row = $resultado->fetch_assoc();
+            return $row;
+        }
+
+        public function insertar($codigo, $nombre, $pais, $factor){
+            $sql =  "INSERT INTO monedas (codigo, nombre, pais, factor) VALUES ('$codigo', '$nombre', '$pais', '$factor')";
+            $resultado = $this->db->query($sql);
+            return $resultado;
+        }
+
+        public function actualizar($id, $codigo, $nombre, $pais, $factor){
+            $sql =  "UPDATE monedas SET 
+            codigo = '$codigo',
+            nombre = '$nombre', 
+            pais = '$pais',
+            factor = $factor
+            WHERE id = '$id'";
+            
+            $resultado = $this->db->query($sql);
+            return $resultado;
+        }
+
+        public function eliminar($id){
+            $sql =  "DELETE FROM  monedas WHERE  id = '$id'";
+            $resultado = $this->db->query($sql);
+            return $resultado;
         }
     }
 ?>

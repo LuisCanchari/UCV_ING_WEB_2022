@@ -16,4 +16,7 @@ git pull origin main
 #actualizar ultima version
 git push origin main
 
+#crear una nueva rama
+git checkout -b nueva-rama
+
 
