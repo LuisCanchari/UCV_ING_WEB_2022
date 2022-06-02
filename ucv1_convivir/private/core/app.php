@@ -5,19 +5,19 @@ class App{
     protected $params = array();
 
     public function __construct(){
-        //echo "Constructor de la app";
-        //echo "<br>";
-        
-        $URL = $this->getURL();
-        $controladorClass = ucfirst(strtolower($URL[0]))."Controller";
-        $controladorFile =  "../private/controllers/".$controladorClass.".php";
+       
+       
+        $URL = $this->getURL(); 
+
+        $controladorClass = ucfirst(strtolower($URL[0]))."Controller"; 
+        $controladorFile =  "../private/controllers/".$controladorClass.".php"; 
         
         if (file_exists($controladorFile)){
             $this->controller = $controladorClass;
             unset($URL[0]);
         }else{
             $controladorClass = 'ErrorController';
-            $controladorFile = "../private/controllers/HomeController.php";
+            $controladorFile = "../private/controllers/ErrorController.php";
             $this->controller = $controladorClass;
         }
  
@@ -42,8 +42,9 @@ class App{
 
     private function getURL(){
         $req = array();
-        $url = isset($_GET['url'])?$_GET['url']:"home";
-        $req = explode("/",filter_var((trim($url,"/")),FILTER_SANITIZE_URL));
+        $url = isset($_GET['url'])?$_GET['url']:"home"; // /valor1
+        $req = explode("/",filter_var((trim($url,"/")),FILTER_SANITIZE_URL));// valor1/valor2 
+        
         return ($req);
     }
 
