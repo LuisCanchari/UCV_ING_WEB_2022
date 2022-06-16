@@ -1,0 +1,2 @@
+--Implementacion del core y herencia
+--Implementacion de la seguridad
