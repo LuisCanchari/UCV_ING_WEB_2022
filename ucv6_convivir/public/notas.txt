@@ -1,0 +1,9 @@
+--Implementacion de reportes
+--Crear la base de datos y tablas
+--Cambiar password de la base de datos
+--descrgar instalar composer en tu pc
+https://getcomposer.org/download/
+
+--descargar e instalar mpdf en la carpeta private del proyecto
+
+PS C:\xampp\htdocs\ucv4_convivir\private>  composer require mpdf/mpdf
