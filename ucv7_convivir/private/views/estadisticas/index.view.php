@@ -16,7 +16,7 @@
 		</li>
 
 		<li class="nav-item">
-			<button class="nav-link" onclick="mostrarGrafico4();">Numero de usuarios por tipo</button>
+			<button class="nav-link" onclick="mostrarGrafico4();">Numero de personas por genero</button>
 		</li>
 
 	</ul>
